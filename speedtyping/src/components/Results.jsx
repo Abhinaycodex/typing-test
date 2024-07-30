@@ -1,12 +1,13 @@
 import React from 'react';
 
-const Results = ({ text, Input }) => {
+const Results = ({ text, input }) => {
   const calculateWPM = () => {
-     // Ensure input is defined and is a string
-     if (!Input || typeof Input !== 'string') {
+    // Ensure input is defined and is a string
+    if (!input || typeof input !== 'string') {
       return 0;
     }
-    const words = Input.trim().split(/\s+/).filter(word => word.length > 0);
+    // Split the input into words using any whitespace character as the separator
+    const words = input.trim().split(/\s+/).filter(word => word.length > 0);
     const wordsTyped = words.length;
     return wordsTyped;
   };

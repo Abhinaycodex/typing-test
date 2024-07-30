@@ -4,12 +4,14 @@ import Timer from './Timer';
 import TextInput from './TextInput';
 import Results from './Results';
 
+
+
 function TypingTest() {
     
-  const [Text, setText] = useState(0);
-  const [Input, setInput] = useState(0);
-  const [Timeleft, setTimeleft] = useState(0);
-  const [Isfinished, setIsfinished] = useState(0);
+  const [Text, setText] = useState('');
+  const [Input, setInput] = useState("");
+  const [Timeleft, setTimeleft] = useState(60);
+  const [Isfinished, setIsfinished] = useState(false);
     
   useEffect(() => {
       if (Timeleft > 0 && !Isfinished) {
